@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Telefon Do'koni</title>
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/languages.css">
+</head>
+
+<body>
+
+	<!-- Header section -->
+	<header class="header">
+		<div class="container">
+			<nav class="nav">
+				<a href="#" class="header__logo">
+					<img src="./images/logo-img.png" alt="my-logo-img">
+				</a>
+				<ul class="nav__items" id="navItems">
+					<li class="nav__item"><a href="#home" data-i18n="nav_home">Home</a></li>
+					<li class="nav__item"><a href="#about" data-i18n="nav_about">About</a></li>
+					<li class="nav__item"><a href="#models" data-i18n="nav_models">Telefon modellari</a></li>
+					<li class="nav__item"><a href="#narxlar" data-i18n="nav_prices">Narxlar</a></li>
+					<li class="nav__item"><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+				</ul>
+				<!-- Til tanlash -->
+				<div class="lang__switcher">
+					<button class="lang__btn active" data-lang="uz">
+						<img src="./images/uz-img.png" alt="uz-img">UZ</button>
+					<button class="lang__btn" data-lang="ru">
+						<img src="./images/rus-img.jpg" alt="rus-img">RU</button>
+					<button class="lang__btn" data-lang="en">
+						<img src="./images/eng-img.jpg" alt="eng-img">EN</button>
+				</div>
+
+				<!-- Hamburger -->
+				<button type="button" class="hamburger" id="hamburger" aria-label="Menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<div class="nav__overlay" id="navOverlay"></div>
+			</nav>
+		</div>
+	</header>
+	<!-- /Header section -->
+
+	<!-- Main -->
+	<main class="container">
+		<!-- Home section -->
+		<section id="home" class="home reveal">
+			<div class="home__about text-main" data-i18n="home_title">
+				Salom! Telefon Do'konimizga xush kelibsiz
+			</div>
+		</section>
+		<!-- /Home section -->
+
+		<!-- About section -->
+		<section id="about" class="about reveal">
+			<div class="about__information">
+				<h3 class="about__smallTitle" id="heading" data-i18n="about_desc">
+					Bizning do'kondan...
+				</h3>
+				<button type="button" id="about__btn" class="about__btn" data-i18n="about_btn">Ko'proq</button>
+			</div>
+			<div class="about__image--position">
+				<img src="./images/phon-1-img.png" class="about__img" alt="phone-img">
+			</div>
+		</section>
+		<div class="clear-fix"></div>
+		<!-- /About section -->
+
+		<!-- Phone brends -->
+		<section id="models" class="models reveal">
+			<h2 class="models__title text-main" data-i18n="models_title">Telefon brendlari</h2>
+			<div class="models-container">
+				<div class="scroll-container">
+					<div class="scroll-list">
+						<div class="tag">Iphone</div>
+						<div class="tag">Samsung</div>
+						<div class="tag">Xiaomi</div>
+						<div class="tag">Huawei</div>
+						<div class="tag">Honor</div>
+						<div class="tag">One plus</div>
+						<div class="tag">Iphone</div>
+					</div>
+					<div class="fade-left"></div>
+					<div class="fade-right"></div>
+				</div>
+			</div>
+		</section>
+		<!-- /Phone brends -->
+
+		<!-- Iphone modells -->
+		<section class="phone-models reveal">
+			<h2 class="phone__models__title text-main" data-i18n="iphone_title">Iphone modellari</h2>
+			<div class="phone__container__parent">
+				<div class="phone__parent__items">
+					<img src="./images/iphone-11-img.jpg" alt="iphone11-img">
+					<div class="phone__parent__info">
+						<h3 class="phone__info__name">Iphone: 11</h3>
+						<p class="phone__info__text" data-i18n="iphone11_memory">Xotirasi: 64/128/256gb</p>
+						<p class="phone__info__text" data-i18n="iphone11_processor">Protsessori: A13 Bionic</p>
+					</div>
+				</div>
+				<div class="phone__parent__items">
+					<img src="./images/iphone-12-img.jpg" alt="iphone12-img">
+					<div class="phone__parent__info">
+						<h3 class="phone__info__name">Iphone: 12</h3>
+						<p class="phone__info__text" data-i18n="iphone12_memory">Xotirasi: 64/128/256gb</p>
+						<p class="phone__info__text" data-i18n="iphone12_processor">Protsessori: A14 Bionic</p>
+					</div>
+				</div>
+				<div class="phone__parent__items">
+					<img src="./images/iphone-13-img.jpg" alt="iphone13-img">
+					<div class="phone__parent__info">
+						<h3 class="phone__info__name">Iphone: 13</h3>
+						<p class="phone__info__text" data-i18n="iphone13_memory">Xotirasi: 128/256/512gb</p>
+						<p class="phone__info__text" data-i18n="iphone13_processor">Protsessori: A15 Bionic</p>
+					</div>
+				</div>
+				<div class="phone__parent__items">
+					<img src="./images/iphone14-img.webp" alt="iphone14-img">
+					<div class="phone__parent__info">
+						<h3 class="phone__info__name">Iphone: 14</h3>
+						<p class="phone__info__text" data-i18n="iphone14_memory">Xotirasi: 128/256/512gb</p>
+						<p class="phone__info__text" data-i18n="iphone14_processor">Protsessori: A15 Bionic</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /Iphone models -->
+
+		<!-- Samsung models -->
+		<section class="samsung__models reveal">
+			<h2 class="phone__models__title text-main" data-i18n="samsung_title">Samsung modellari</h2>
+			<div class="phone__container__parent">
+				<div class="phone__parent__items">
+					<img src="./images/s21-img.webp" alt="s21-img">
+					<div class="phone__parent__info">
+						<h3 class="phone__info__name">Samsung: S21</h3>
+						<p class="phone__info__text" data-i18n="s21_memory">Xotirasi: 128/256gb</p>
+					</div>
+				</div>
+				<div class="phone__parent__items">
+					<img src="./images/s23-img.webp" alt="s21 ultra-img">
+					<div class="phone__parent__info">
+						<h3 class="phone__info__name">Samsung: S23</h3>
+						<p class="phone__info__text" data-i18n="s23_memory">Xotirasi: 128/256gb</p>
+					</div>
+				</div>
+				<div class="phone__parent__items">
+					<img src="./images/s25-img.webp" alt="s25 ultra-img">
+					<div class="phone__parent__info">
+						<h3 class="phone__info__name">Samsung: S25</h3>
+						<p class="phone__info__text" data-i18n="s25_memory">Xotirasi: 128/256/512gb</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /Samsung models -->
+
+		<!-- Form section -->
+		<section id="contact-form" class="form reveal">
+			<form class="form__container" id="loginForm">
+				<h2 class="form__title main__text" data-i18n="form_title">Shaxsiy ma'lumotlarni to'ldirish</h2>
+				<input type="text" id="firstname" data-i18n-placeholder="form_firstname" placeholder="Ismingizni kiriting">
+				<input type="text" id="lastname" data-i18n-placeholder="form_lastname" placeholder="Familyangizni kiriting">
+				<input type="email" id="email" data-i18n-placeholder="form_email" placeholder="Emailingizni kiriting">
+				<input type="password" id="password" data-i18n-placeholder="form_password" placeholder="Parolingizni kiriting">
+				<button type="submit" id="form__btn" class="form__btn" data-i18n="form_btn">Login</button>
+			</form>
+		</section>
+		<!-- /Form section -->
+
+		<!-- Narxlar bo'limi -->
+		<section id="narxlar" class="prices reveal">
+			<h2 class="prices__title text-main" data-i18n="prices_title">Narxlar</h2>
+
+			<!-- Filter tugmalari -->
+			<div class="filter__btns">
+				<button class="filter__btn active" data-filter="all" data-i18n="filter_all">Barchasi</button>
+				<button class="filter__btn" data-filter="iphone" data-i18n="filter_iphone">iPhone</button>
+				<button class="filter__btn" data-filter="samsung" data-i18n="filter_samsung">Samsung</button>
+			</div>
+
+			<!-- Telefon narx kartochkalari -->
+			<div class="prices__grid">
+				<div class="price__card" data-brand="iphone">
+					<img src="./images/iphone-11-img.jpg" alt="iphone11">
+					<h3 class="price__name">iPhone 11</h3>
+					<p class="price__memory">128gb</p>
+					<p class="price__amount">$299</p>
+					<button class="price__btn">🛒 Zakaz</button>
+				</div>
+				<div class="price__card" data-brand="iphone">
+					<img src="./images/iphone-12-img.jpg" alt="iphone12">
+					<h3 class="price__name">iPhone 12</h3>
+					<p class="price__memory">128gb</p>
+					<p class="price__amount">$399</p>
+					<button class="price__btn">🛒 Zakaz</button>
+				</div>
+				<div class="price__card" data-brand="iphone">
+					<img src="./images/iphone-13-img.jpg" alt="iphone13">
+					<h3 class="price__name">iPhone 13</h3>
+					<p class="price__memory">128gb</p>
+					<p class="price__amount">$499</p>
+					<button class="price__btn">🛒 Zakaz</button>
+				</div>
+				<div class="price__card" data-brand="iphone">
+					<img src="./images/iphone14-img.webp" alt="iphone14">
+					<h3 class="price__name">iPhone 14</h3>
+					<p class="price__memory">128gb</p>
+					<p class="price__amount">$599</p>
+					<button class="price__btn">🛒 Zakaz</button>
+				</div>
+				<div class="price__card" data-brand="samsung">
+					<img src="./images/s21-img.webp" alt="s21">
+					<h3 class="price__name">Samsung S21</h3>
+					<p class="price__memory">128gb</p>
+					<p class="price__amount">$349</p>
+					<button class="price__btn">🛒 Zakaz</button>
+				</div>
+				<div class="price__card" data-brand="samsung">
+					<img src="./images/s23-img.webp" alt="s23">
+					<h3 class="price__name">Samsung S23</h3>
+					<p class="price__memory">128gb</p>
+					<p class="price__amount">$449</p>
+					<button class="price__btn">🛒 Zakaz</button>
+				</div>
+				<div class="price__card" data-brand="samsung">
+					<img src="./images/s25-img.webp" alt="s25">
+					<h3 class="price__name">Samsung S25</h3>
+					<p class="price__memory">128gb</p>
+					<p class="price__amount">$649</p>
+					<button class="price__btn">🛒 Zakaz</button>
+				</div>
+			</div>
+
+			<!-- Zakaz qilinganlar -->
+			<div class="orders__section">
+				<h3 class="orders__title" data-i18n="orders_title">🛒 Mening zakazlarim</h3>
+				<ul class="orders__list" id="ordersList"></ul>
+				<button class="orders__clear" id="clearOrders" data-i18n="orders_clear">🗑 Zakazlarni tozalash</button>
+			</div>
+		</section>
+		<!-- /Narxlar bo'limi -->
+
+		<!-- Contact section -->
+		<section id="contact" class="contact reveal">
+			<h2 class="contact__title text-main" data-i18n="contact_title">Biz bilan bog'laning</h2>
+			<p class="contact__subtitle" data-i18n="contact_subtitle">Savollaringiz bormi?</p>
+
+			<div class="contact__wrapper">
+
+				<!-- Chap — ma'lumotlar -->
+				<div class="contact__info">
+					<div class="contact__info--item">
+						<span class="contact__icon">📍</span>
+						<div>
+							<h4 data-i18n="contact_label_address">Manzil</h4>
+							<p data-i18n="contact_address">Toshkent, Chilonzor tumani</p>
+						</div>
+					</div>
+					<div class="contact__info--item">
+						<span class="contact__icon">📞</span>
+						<div>
+							<h4 data-i18n="contact_label_phone">Telefon</h4>
+							<p data-i18n="contact_worktime">Dush–Shan: 9:00 – 18:00</p>
+						</div>
+					</div>
+					<div class="contact__info--item">
+						<span class="contact__icon">📧</span>
+						<div>
+							<h4 data-i18n="contact_label_email">Email</h4>>
+							<p>info@telefondokon.uz</p>
+						</div>
+					</div>
+					<div class="contact__info--item">
+						<span class="contact__icon">📞</span>
+						<div>
+							<h4 data-i18n="contact_label_phone">Telefon</h4>
+							<p>+998 90 123 45 67</p>
+						</div>
+					</div>
+
+					<!-- Ish vaqti qatori — to'g'ri kalit bilan -->
+					<div class="contact__info--item">
+						<span class="contact__icon">🕐</span>
+						<div>
+							<h4 data-i18n="contact_label_worktime">Ish vaqti</h4>
+							<p data-i18n="contact_worktime">Dush–Shan: 9:00 – 18:00</p>
+						</div>
+					</div>
+					<!-- Social links -->
+					<div class="contact__social">
+						<a href="https://instagram.com" target="_blank" class="social__link instagram">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+								<circle cx="12" cy="12" r="4" />
+								<circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+							</svg>
+							Instagram
+						</a>
+						<a href="https://t.me" target="_blank" class="social__link telegram">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+								<path
+									d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z" />
+							</svg>
+							Telegram
+						</a>
+						<a href="https://facebook.com" target="_blank" class="social__link facebook">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+								<path
+									d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+							</svg>
+							Facebook
+						</a>
+					</div>
+				</div>
+
+				<!-- O'ng — forma -->
+				<form class="contact__form" id="contactForm">
+					<div class="contact__form--group">
+						<label data-i18n="contact_name_label">Ismingiz</label>
+						<input type="text" id="contactName" data-i18n-placeholder="contact_name_placeholder"
+							placeholder="Ismingizni kiriting">
+						<span class="contact__error" id="nameError"></span>
+					</div>
+					<div class="contact__form--group">
+						<label data-i18n="contact_email_label">Email</label>
+						<input type="email" id="contactEmail" data-i18n-placeholder="contact_email_placeholder"
+							placeholder="Emailingizni kiriting">
+						<span class="contact__error" id="emailError"></span>
+					</div>
+					<div class="contact__form--group">
+						<label data-i18n="contact_msg_label">Xabar</label>
+						<textarea id="contactMessage" data-i18n-placeholder="contact_msg_placeholder"
+							placeholder="Xabaringizni yozing..."></textarea>
+						<span class="contact__error" id="messageError"></span>
+					</div>
+					<button type="submit" class="contact__submit" data-i18n="contact_submit">📨 Xabar yuborish</button>
+				</form>
+
+			</div>
+		</section>
+		<!-- /Contact section -->
+	</main>
+	<!-- /Main -->
+
+	<!-- Modal -->
+	<div class="modal-overlay" id="modalOverlay">
+		<div class="modal">
+			<button class="modal__close" id="modalClose">✕</button>
+			<img src="" alt="" class="modal__img" id="modalImg">
+			<h3 class="modal__name" id="modalName"></h3>
+			<p class="modal__info" id="modalMemory"></p>
+			<p class="modal__info" id="modalProcessor"></p>
+			<button class="modal__order-btn" id="modalOrderBtn" data-i18n="order_btn">🛒 Zakaz</button>
+		</div>
+	</div>
+	<!-- /Modal -->
+
+	<!-- Toast -->
+	<div class="toast" id="toast"></div>
+	<!-- /Toast -->
+
+	<!-- Footer section -->
+	<footer class="footer reveal">
+		<div class="container">
+			<div class="footer__content">
+
+				<!-- Logo va tavsif -->
+				<div class="footer__brand">
+					<a href="#" class="footer__logo">
+						<img src="./images/logo-img.png" alt="logo">
+					</a>
+					<p class="footer__desc" data-i18n="footer_desc">Eng yangi telefon modellari...</p>
+				</div>
+
+				<!-- Tezkor havolalar -->
+				<div class="footer__links">
+					<h4 class="footer__title" data-i18n="footer_links">Havolalar</h4>
+					<ul>
+						<li><a href="#home" data-i18n="nav_home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#models" data-i18n="nav_models">Telefon modellari</a></li>
+						<li><a href="#narxlar" data-i18n="nav_prices">Narxlar</a></li>
+						<li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+					</ul>
+				</div>
+
+				<!-- Ijtimoiy tarmoqlar -->
+				<div class="footer__social">
+					<h4 class="footer__title" data-i18n="footer_connect">Biz bilan bog'laning</h4>
+					<div class="footer__social--links">
+
+						<a href="https://instagram.com" target="_blank" class="social__link instagram">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+								<circle cx="12" cy="12" r="4" />
+								<circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+							</svg>
+							Instagram
+						</a>
+
+						<a href="https://t.me" target="_blank" class="social__link telegram">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+								<path
+									d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z" />
+							</svg>
+							Telegram
+						</a>
+
+						<a href="https://facebook.com" target="_blank" class="social__link facebook">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+								<path
+									d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+							</svg>
+							Facebook
+						</a>
+
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Alt qism -->
+			<div class="footer__bottom">
+				<p data-i18n="footer_rights">© 2026 Telefon Do'koni...</p>
+			</div>
+		</div>
+	</footer>
+	<!-- /Footer section -->
+
+	<script src="./js/i18n.js"></script>
+	<script src="./js/app.js"></script>
+	<script src="./js/java.js"></script>
+</body>
+
+</html>

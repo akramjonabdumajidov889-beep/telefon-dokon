@@ -1,0 +1,1293 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--bg: #0b0c10;
+	--panel: #13151c;
+	--border: #1e2130;
+	--primary: #0f172a;
+	--accent: #00ffc8;
+	--accent1: #00ddcc;
+	--accent2: #ff6b6b;
+	--accent3: #ffd166;
+	--text: #e4e8f0;
+	--green: #05364a;
+	--muted: #5c6580;
+	--radius: 12px;
+	--mono: 'Space Mono', monospace;
+	--display: 'Syne', sans-serif;
+}
+
+body {
+	background: var(--panel);
+}
+
+.text-main {
+	font-family: var(--display);
+	font-size: clamp(2rem, 5vw, 3.6rem);
+	font-weight: 800;
+	letter-spacing: -1px;
+	background: linear-gradient(90deg, var(--accent), #7cffcb, var(--accent3));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.main__text {
+	font-family: var(--display);
+	font-weight: 800;
+	letter-spacing: -1px;
+	background: linear-gradient(90deg, var(--accent), #7cffcb, var(--accent3));
+	-webkit-background-clip: text;
+	font-size: 32px;
+	text-align: center;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.class__btn {
+	background: linear-gradient(90deg, var(--accent), #7cffcb, var(--accent3));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	/* background: var(--accent2); */
+	background-clip: text;
+	font-family: var(--display);
+}
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+	/* animation: refresh 2s linear; */
+}
+
+@keyframes refresh {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.clear-fix {
+	clear: both;
+}
+
+.reveal {
+	opacity: 0;
+	transition: all 0.8s ease-out;
+	transform: translateY(70px);
+}
+
+.reveal.active {
+	opacity: 1;
+	transform: translateY(0);
+	/* transform: translateX(0); */
+}
+
+/* Header section */
+.header {
+	background: var(--panel);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 100;
+	padding: 10px;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+	transition: box-shadow 0.3s ease;
+}
+
+/* Hamburger — katta ekranda yashirin */
+.hamburger {
+	display: none;
+	background: none;
+	border: none;
+}
+
+.header.scrolled {
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__logo img {
+	width: 30px;
+}
+
+.nav__items {
+	display: flex;
+	gap: 20px;
+	list-style: none;
+}
+
+.nav__item a {
+	text-decoration: none;
+	color: var(--accent2);
+	font-size: 13px;
+	font-weight: 400;
+	text-transform: uppercase;
+	padding: 0 30px;
+	transition: all 0.5s;
+}
+
+/* Nav active link */
+.nav__item a.active {
+	color: var(--accent);
+	position: relative;
+}
+
+.nav__item a.active::after {
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 30px;
+	right: 30px;
+	height: 2px;
+	background: var(--accent);
+	border-radius: 2px;
+	animation: lineIn 0.3s ease;
+}
+
+@keyframes lineIn {
+	from {
+		transform: scaleX(0);
+	}
+	to {
+		transform: scaleX(1);
+	}
+}
+
+.nav__item a:hover {
+	color: var(--accent);
+}
+
+/* Home section */
+.home {
+	padding-top: 100px;
+	text-align: center;
+	min-height: 100vh;
+}
+
+.home__about {
+	padding: 100px 0;
+	color: var(--accent);
+	min-height: 50vh;
+}
+
+/* About section */
+.about {
+	padding-top: 100px;
+	min-height: 60vh;
+}
+
+.about > div {
+	float: left;
+	width: 50%;
+}
+
+.about__information {
+	color: var(--text);
+	font-size: 20px;
+	font-family: var(--display);
+	max-width: 400px;
+	padding-top: 40px;
+	line-height: 1.5;
+	letter-spacing: 2px;
+}
+
+.about__btn {
+	margin-top: 20px;
+	padding: 8px 18px;
+	background-color: var(--accent);
+	border: none;
+	font-size: 17px;
+	font-weight: 700;
+	color: var(--panel);
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.about__btn:hover {
+	background: var(--accent1);
+	color: var(--bg);
+}
+
+.about__image--position {
+	text-align: right;
+}
+
+.about__img {
+	border-radius: 4px;
+	width: 500px;
+	height: 340px;
+	object-fit: cover;
+}
+
+/* Phone brends */
+.models {
+	padding-top: 200px;
+	min-height: 70vh;
+}
+
+.models__title {
+	color: var(--accent);
+	font-size: 32px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.models-container {
+	display: flex;
+	justify-content: center;
+	padding-top: 50px;
+}
+
+.scroll-container {
+	background: #0a1214;
+	position: relative;
+	width: 20.8rem;
+	overflow: hidden;
+}
+
+.scroll-list {
+	width: fit-content;
+	display: flex;
+	gap: 1rem;
+	animation: animate 8s linear infinite;
+}
+
+.tag {
+	color: var(--accent2);
+	display: flex;
+	align-items: center;
+	gap: 0 0.2rem;
+	font-size: 1rem;
+	background: #201d32;
+	padding: 0.1rem 1rem;
+	border-radius: 5px;
+	box-shadow: 0 0.1rem 0.2rem #00000033 0 0.1rem 0.5rem #00000033 0 0.2rem
+		1.5rem #00000033;
+	transition: transform 0.6s;
+	cursor: pointer;
+}
+
+.tag:hover {
+	transform: scale(1.1);
+	color: var(--accent);
+}
+
+.fade-left,
+.fade-right {
+	position: absolute;
+	top: 0;
+	width: 5rem;
+	height: 100vh;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.fade-left {
+	left: 0;
+	background: linear-gradient(to right, #0a1214, transparent);
+}
+
+.fade-right {
+	right: 0;
+	background: linear-gradient(to left, #0a1214, transparent);
+}
+
+@keyframes animate {
+	0% {
+		transform: translateX(0%);
+	}
+
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+/* Phone models */
+.phone-models {
+	padding-top: 100px;
+	min-height: 100vh;
+}
+
+.phone__models__title {
+	text-align: center;
+	color: var(--accent);
+	font-size: 32px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.phone__container__parent {
+	background: var(--bg);
+	min-height: 100vh;
+	margin: 100px 0;
+}
+
+.phone__parent__items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 40px;
+	width: 100%;
+	margin-left: 50px;
+	margin-top: 40px;
+	text-align: center;
+	border-radius: 6px;
+}
+
+.phone__parent__items img {
+	width: 270px;
+	border-radius: 6px;
+	margin-left: 50px;
+	/* clip-path: circle(50%); */
+}
+
+.phone__info__name {
+	color: var(--accent);
+	font-size: 22px;
+	margin-top: 50px;
+	margin-bottom: 15px;
+	letter-spacing: 2px;
+}
+
+.phone__info__text {
+	color: var(--text);
+	font-size: 18px;
+	letter-spacing: 2px;
+	margin: 10px 0;
+}
+
+/* Samsung models */
+.samsung__models {
+	padding-top: 100px;
+	min-height: 100vh;
+}
+
+/* Form */
+.form {
+	padding-top: 200px;
+	min-height: 100vh;
+}
+
+.form__container {
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+	border-radius: 10px;
+	margin: 100px auto;
+	background: var(--muted);
+}
+
+.form__container input {
+	background: var(--green);
+	width: 70%;
+	padding: 10px;
+	margin-bottom: 16px;
+	outline: none;
+	border: none;
+	border-radius: 6px;
+}
+
+.form__container input::placeholder {
+	color: var(--text);
+	transition: all 0.6s;
+}
+
+.form__container input:focus::placeholder {
+	color: var(--accent);
+	transform: translateY(-10px);
+}
+
+.form__btn {
+	padding: 7px 20px;
+	width: 100px;
+	border: none;
+	border-radius: 6px;
+	background: var(--accent);
+	font-size: 17px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: all 0.6s;
+}
+
+.form__btn:hover {
+	background: var(--accent1);
+	transform: scale(1.05);
+}
+
+/* Input xato holati */
+.input-error {
+	color: var(--accent2);
+	font-size: 12px;
+	margin-top: -10px;
+	margin-bottom: 10px;
+	width: 70%;
+	text-align: left;
+	animation: fadeInDown 0.3s ease;
+}
+
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		transform: translateY(-6px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Input focus animatsiyasi */
+.form__container input {
+	transition:
+		border 0.3s ease,
+		transform 0.2s ease;
+}
+
+.form__container input:focus {
+	transform: scale(1.02);
+	border: 1.5px solid var(--accent) !important;
+}
+
+/* Kartochka hover efekt */
+.phone__parent__items {
+	cursor: pointer;
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
+}
+
+.phone__parent__items:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 12px 30px rgba(0, 255, 200, 0.15);
+}
+
+/* Modal */
+.modal-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.75);
+	z-index: 999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal {
+	background: var(--panel);
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	padding: 30px;
+	max-width: 420px;
+	width: 90%;
+	transform: translateY(30px);
+	transition: transform 0.3s ease;
+	position: relative;
+}
+
+.modal-overlay.active .modal {
+	transform: translateY(0);
+}
+
+.modal__close {
+	position: absolute;
+	top: 14px;
+	right: 18px;
+	background: none;
+	border: none;
+	color: var(--text);
+	font-size: 22px;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+.modal__close:hover {
+	color: var(--accent2);
+}
+
+.modal__img {
+	width: 100%;
+	height: 220px;
+	object-fit: contain;
+	border-radius: 10px;
+	margin-bottom: 16px;
+}
+
+.modal__name {
+	color: var(--accent);
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+}
+
+.modal__info {
+	color: var(--text);
+	font-size: 15px;
+	margin: 6px 0;
+	letter-spacing: 1px;
+}
+
+.modal__order-btn {
+	margin-top: 20px;
+	width: 100%;
+	padding: 10px;
+	background: var(--accent);
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 700;
+	color: var(--panel);
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.modal__order-btn:hover {
+	background: var(--accent3);
+	transform: scale(1.03);
+}
+
+/* Zakaz tasdiqlash xabari */
+.toast {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	background: var(--accent);
+	color: var(--panel);
+	padding: 12px 24px;
+	border-radius: 8px;
+	font-weight: 700;
+	font-size: 15px;
+	z-index: 9999;
+	opacity: 0;
+	transform: translateY(20px);
+	transition: all 0.4s ease;
+}
+
+.toast.show {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Narxlar bo'limi */
+.prices {
+	padding-top: 150px;
+	min-height: 100vh;
+}
+
+.prices__title {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+/* Filter tugmalari */
+.filter__btns {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+	margin-bottom: 50px;
+}
+
+.filter__btn {
+	padding: 8px 24px;
+	border: 2px solid var(--accent);
+	background: transparent;
+	color: var(--accent);
+	border-radius: 30px;
+	font-size: 15px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.filter__btn:hover,
+.filter__btn.active {
+	background: var(--accent);
+	color: var(--panel);
+}
+
+/* Narx kartochkalari */
+.prices__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 24px;
+	padding: 0 20px;
+}
+
+.price__card {
+	background: var(--bg);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 20px;
+	text-align: center;
+	transition: all 0.4s ease;
+	animation: fadeInUp 0.4s ease;
+}
+
+.price__card:hover {
+	transform: translateY(-6px);
+	border-color: var(--accent);
+	box-shadow: 0 8px 24px rgba(0, 255, 200, 0.1);
+}
+
+.price__card img {
+	width: 120px;
+	height: 120px;
+	object-fit: contain;
+	margin-bottom: 14px;
+}
+
+.price__name {
+	color: var(--accent);
+	font-size: 17px;
+	font-weight: 700;
+	margin-bottom: 6px;
+	letter-spacing: 1px;
+}
+
+.price__memory {
+	color: var(--muted);
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+
+.price__amount {
+	color: var(--accent3);
+	font-size: 22px;
+	font-weight: 800;
+	margin-bottom: 16px;
+}
+
+.price__btn {
+	width: 100%;
+	padding: 8px;
+	background: transparent;
+	border: 1.5px solid var(--accent);
+	color: var(--accent);
+	border-radius: 8px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.price__btn:hover {
+	background: var(--accent);
+	color: var(--panel);
+}
+
+/* Kartochka yashirish animatsiyasi */
+.price__card.hidden {
+	display: none;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Zakazlar bo'limi */
+.orders__section {
+	margin-top: 60px;
+	padding: 30px;
+	background: var(--bg);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.orders__title {
+	color: var(--accent);
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+}
+
+.orders__list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.orders__list li {
+	background: var(--panel);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	padding: 10px 16px;
+	color: var(--text);
+	font-size: 14px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.orders__list li span {
+	color: var(--muted);
+	font-size: 12px;
+}
+
+.orders__clear {
+	margin-top: 16px;
+	padding: 8px 20px;
+	background: transparent;
+	border: 1.5px solid var(--accent2);
+	color: var(--accent2);
+	border-radius: 8px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.orders__clear:hover {
+	background: var(--accent2);
+	color: var(--panel);
+}
+
+/* ===== CONTACT ===== */
+.contact {
+	padding-top: 150px;
+	min-height: 100vh;
+}
+
+.contact__title {
+	text-align: center;
+}
+
+.contact__subtitle {
+	text-align: center;
+	color: var(--muted);
+	font-size: 15px;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	letter-spacing: 1px;
+}
+
+.contact__wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1.5fr;
+	gap: 40px;
+	align-items: start;
+}
+
+/* Chap — info */
+.contact__info {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.contact__info--item {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	background: var(--bg);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 16px 20px;
+	transition: border-color 0.3s;
+}
+
+.contact__info--item:hover {
+	border-color: var(--accent);
+}
+
+.contact__icon {
+	font-size: 24px;
+	min-width: 36px;
+	text-align: center;
+}
+
+.contact__info--item h4 {
+	color: var(--accent);
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-bottom: 4px;
+}
+
+.contact__info--item p {
+	color: var(--text);
+	font-size: 14px;
+}
+
+.contact__social {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-top: 10px;
+}
+
+/* O'ng — forma */
+.contact__form {
+	background: var(--bg);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 36px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.contact__form--group {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.contact__form--group label {
+	color: var(--accent);
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.contact__form--group input,
+.contact__form--group textarea {
+	background: var(--panel);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	padding: 12px 16px;
+	color: var(--text);
+	font-size: 14px;
+	outline: none;
+	transition:
+		border-color 0.3s,
+		transform 0.2s;
+	resize: none;
+	font-family: inherit;
+}
+
+.contact__form--group input:focus,
+.contact__form--group textarea:focus {
+	border-color: var(--accent);
+	transform: scale(1.01);
+}
+
+.contact__error {
+	color: var(--accent2);
+	font-size: 12px;
+	min-height: 16px;
+	animation: fadeInDown 0.3s ease;
+}
+
+.contact__submit {
+	padding: 12px;
+	background: var(--accent);
+	border: none;
+	border-radius: 8px;
+	color: var(--panel);
+	font-size: 16px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: all 0.3s;
+	letter-spacing: 1px;
+}
+
+.contact__submit:hover {
+	background: var(--accent3);
+	transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.contact__wrapper {
+		grid-template-columns: 1fr;
+	}
+
+	.contact__form {
+		padding: 24px;
+	}
+}
+
+/* Footer */
+.footer {
+	margin-top: 100px;
+	background: var(--bg);
+	border-top: 1px solid var(--border);
+	padding: 60px 20px 0;
+}
+
+.footer__content {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1.5fr;
+	gap: 40px;
+	padding-bottom: 40px;
+}
+
+/* Brand */
+.footer__logo img {
+	width: 40px;
+	margin-bottom: 16px;
+}
+
+.footer__desc {
+	color: var(--muted);
+	font-size: 14px;
+	line-height: 1.8;
+	letter-spacing: 0.5px;
+}
+
+/* Havolalar */
+.footer__title {
+	color: var(--accent);
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.footer__links ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.footer__links ul li a {
+	color: var(--muted);
+	text-decoration: none;
+	font-size: 14px;
+	transition: all 0.3s;
+	letter-spacing: 0.5px;
+}
+
+.footer__links ul li a:hover {
+	color: var(--accent);
+	padding-left: 6px;
+}
+
+/* Ijtimoiy tarmoqlar */
+.footer__social--links {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.social__link {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 10px 16px;
+	border-radius: 10px;
+	border: 1px solid var(--border);
+	transition: all 0.3s ease;
+	width: fit-content;
+}
+
+.social__link.instagram {
+	color: #e1306c;
+}
+
+.social__link.instagram:hover {
+	background: #e1306c;
+	color: #fff;
+	border-color: #e1306c;
+	transform: translateX(6px);
+}
+
+.social__link.telegram {
+	color: #29b6f6;
+}
+
+.social__link.telegram:hover {
+	background: #29b6f6;
+	color: #fff;
+	border-color: #29b6f6;
+	transform: translateX(6px);
+}
+
+.social__link.facebook {
+	color: #1877f2;
+}
+
+.social__link.facebook:hover {
+	background: #1877f2;
+	color: #fff;
+	border-color: #1877f2;
+	transform: translateX(6px);
+}
+
+/* Footer bottom */
+.footer__bottom {
+	border-top: 1px solid var(--border);
+	padding: 20px 0;
+	text-align: center;
+}
+
+.footer__bottom p {
+	color: var(--muted);
+	font-size: 13px;
+	letter-spacing: 0.5px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet — 1024px */
+@media (max-width: 1024px) {
+	.container {
+		padding: 0 20px;
+	}
+
+	.about > div {
+		width: 100%;
+		float: none;
+	}
+
+	.about__img {
+		width: 100%;
+		height: 280px;
+	}
+
+	.about__information {
+		max-width: 100%;
+	}
+
+	.footer__content {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.phone__parent__items {
+		grid-template-columns: repeat(2, 1fr);
+		margin-left: 0;
+	}
+
+	.phone__parent__items img {
+		width: 200px;
+		margin-left: 0;
+	}
+}
+
+/* Tablet kichik — 768px */
+@media (max-width: 768px) {
+	/* Nav — hamburger */
+	.nav__items {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		height: 100vh;
+		width: 260px;
+		background: var(--bg);
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 30px;
+		transition: right 0.4s ease;
+		z-index: 999;
+		border-left: 1px solid var(--border);
+	}
+
+	.nav__items.open {
+		right: 0;
+	}
+
+	.nav__item a {
+		font-size: 16px;
+		padding: 0;
+	}
+
+	/* Hamburger tugma */
+	.hamburger {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		cursor: pointer;
+		z-index: 1000;
+		padding: 6px;
+	}
+
+	.hamburger span {
+		display: block;
+		width: 26px;
+		height: 2px;
+		background: var(--accent);
+		border-radius: 2px;
+		transition: all 0.4s ease;
+	}
+
+	/* Hamburger — X animatsiya */
+	.hamburger.active span:nth-child(1) {
+		transform: translateY(7px) rotate(45deg);
+	}
+
+	.hamburger.active span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.active span:nth-child(3) {
+		transform: translateY(-7px) rotate(-45deg);
+	}
+
+	/* Overlay — menu ochilganda qora fon */
+	.nav__overlay {
+		display: none;
+		position: fixed;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.6);
+		z-index: 998;
+	}
+
+	.nav__overlay.active {
+		display: block;
+	}
+
+	/* Sections */
+	.home {
+		padding-top: 80px;
+	}
+
+	.home__about {
+		font-size: 24px;
+		padding: 60px 0;
+	}
+
+	.about {
+		padding-top: 60px;
+	}
+
+	.about > div {
+		width: 100%;
+		float: none;
+	}
+
+	.about__img {
+		width: 100%;
+		height: 240px;
+		margin-top: 20px;
+	}
+
+	.about__information {
+		max-width: 100%;
+		font-size: 16px;
+	}
+
+	.models {
+		padding-top: 80px;
+	}
+
+	.phone__container__parent {
+		margin: 40px 0;
+	}
+
+	.phone__parent__items {
+		grid-template-columns: 1fr;
+		margin-left: 0;
+		gap: 20px;
+	}
+
+	.phone__parent__items img {
+		width: 180px;
+		margin: 0 auto;
+	}
+
+	.prices__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.footer__content {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	.filter__btns {
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	.form__container input {
+		width: 90%;
+	}
+}
+
+/* Mobil — 480px */
+@media (max-width: 480px) {
+	.text-main {
+		font-size: 2rem;
+	}
+
+	.home__about {
+		font-size: 30px;
+	}
+
+	.about__img {
+		height: 180px;
+	}
+
+	.prices__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.phone__info__name {
+		font-size: 18px;
+		margin-top: 20px;
+	}
+
+	.scroll-container {
+		width: 90vw;
+	}
+
+	.modal {
+		padding: 20px;
+		width: 95%;
+	}
+
+	.orders__section {
+		padding: 20px;
+	}
+
+	.footer__bottom p {
+		font-size: 12px;
+	}
+
+	.social__link {
+		width: 100%;
+	}
+
+	.form__container {
+		margin: 40px auto;
+	}
+
+	.form__container input {
+		width: 95%;
+	}
+}

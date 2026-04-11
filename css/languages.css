@@ -1,0 +1,46 @@
+/* Til tanlash */
+.lang__switcher {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+}
+
+.lang__btn {
+	background: transparent;
+	border: 1.5px solid var(--border);
+	color: var(--muted);
+	padding: 6px 12px;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: all 0.3s;
+	letter-spacing: 1px;
+}
+
+.lang__btn:hover {
+	border-color: var(--accent);
+	color: var(--accent);
+}
+
+.lang__btn.active {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: var(--panel);
+}
+
+.lang__btn.active img {
+	width: 15px;
+}
+
+.lang__btn img {
+	width: 22px;
+	margin-right: 7px;
+}
+
+/* Mobilda til tugmalari */
+@media (max-width: 768px) {
+	.lang__switcher {
+		order: -1;
+	}
+}

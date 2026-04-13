@@ -126,7 +126,7 @@ body {
 
 .nav__items {
 	display: flex;
-	gap: 20px;
+	gap: 10px;
 	list-style: none;
 }
 
@@ -1289,5 +1289,9 @@ body {
 
 	.form__container input {
 		width: 95%;
+	}
+
+	.header__logo img {
+		display: none;
 	}
 }
